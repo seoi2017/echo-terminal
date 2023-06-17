@@ -1,0 +1,40 @@
+@import "@fontsource/lato";
+@import "@blueprintjs/core/lib/css/blueprint.css";
+@import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+@import "@blueprintjs/select/lib/css/blueprint-select.css";
+@import "@blueprintjs/table/lib/css/table.css";
+@import "@blueprintjs/datetime/lib/css/blueprint-datetime.css";
+@import "@blueprintjs/core/lib/scss/variables";
+
+$pt-font-family: "Lato", sans-serif;
+
+body {
+  font-family: $pt-font-family;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+button {
+  font-family: $pt-font-family;
+}
+
+@mixin transision-style($property: background-color) {
+  transition-property: $property;
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.4, 1, 0.75, 0.9);
+  transition-delay: 0;
+}
+
+%background-style {
+  background-color: $pt-app-background-color;
+
+  &.bp4-dark {
+    background-color: $pt-dark-app-background-color;
+  }
+
+  & > * {
+    background-color: inherit;
+  }
+}
